@@ -56,7 +56,8 @@ server <- function(input, output, session) {
     mtcars |> ggplot(
       aes(x = .data[[input$var_p_2]], y= mpg)
       ) +
-      geom_point()
+      geom_point() +
+      xlab(glue::glue("Este eixo é ", input$var_p_2))
   })
 }
 
