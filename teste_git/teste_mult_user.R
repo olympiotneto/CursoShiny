@@ -57,7 +57,7 @@ server <- function(input, output, session) {
       aes(x = .data[[input$var_p_2]], y= mpg)
       ) +
       geom_point() +
-      xlab(glue::glue("Este eixo é ", input$var_p_2))
+      xlab(glue::glue("Este eixo é\n", input$var_p_2))
   })
 }
 
