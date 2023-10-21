@@ -49,7 +49,9 @@ server <- function(input, output, session) {
   output$tab_estat_2 <- renderTable({
     mtcars |> summarise(
       Media = mean(.data[[input$var_p_2]], na.rm = TRUE),
-      DP = sd(.data[[input$var_p_2]], na.rm = TRUE))
+      DP = sd(.data[[input$var_p_2]], na.rm = TRUE),
+      Correlacao  = cor(.data[[input$var_p_2]], .data[[input$var_p_1]])
+      )
   })
 
   output$grafico_p_2 <- renderPlot({
