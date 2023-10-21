@@ -14,7 +14,7 @@ ui <- navbarPage(
         )
       ),
       mainPanel = mainPanel(
-        tableOutput("tab_estat")
+        tableOutput("tab_estat_1")
       )
     )
           ),
@@ -29,7 +29,8 @@ ui <- navbarPage(
         )
       ),
       mainPanel = mainPanel(
-        tableOutput("tab_estat")
+        tableOutput("tab_estat_2"),
+        plotOutput("grafico_p_2")
 
       )
     )
@@ -39,7 +40,25 @@ ui <- navbarPage(
 
 server <- function(input, output, session) {
 
+  output$tab_estat_1 <- renderTable({
+    mtcars |> summarise(
+      Media = mean(.data[[input$var_p_1]], na.rm = TRUE),
+      DP = sd(.data[[input$var_p_1]], na.rm = TRUE))
+  })
 
+  output$tab_estat_2 <- renderTable({
+    mtcars |> summarise(
+      Media = mean(.data[[input$var_p_2]], na.rm = TRUE),
+      DP = sd(.data[[input$var_p_2]], na.rm = TRUE))
+  })
+
+  output$grafico_p_2 <- renderPlot({
+    mtcars |> ggplot(
+      aes(x = .data[[input$var_p_2]], y= mpg)
+      ) +
+      geom_point()
+  })
 }
+
 
 shinyApp(ui, server)
