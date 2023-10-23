@@ -2,4 +2,6 @@
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.Pellentesque hendrerit velit eu porta viverra. Donec tristique eu nunc a malesuada.Sed luctus enim ac eros egestas porta. Suspendisse et dolor eget arcu tristique finibus quis sed mauris. Nullam vulputate metus sit amet purus semper auctor. Proin vel purus non libero facilisis eleifend. Duis id mauris eu ante imperdiet bibendum. Phasellus sagittis volutpat ligula vel malesuada. Etiam eu imperdiet dui. Aliquam a bibendum ligula, at dignissim orci. Vivamus aliquet vel lectus ac molestie. Fusce auctor, est et pellentesque egestas, odio sapien finibus massa, nec molestie ante enim quis dui. Mauris viverra,mi in rhoncus tempor, libero nulla fringilla purus, sit amet tincidunt tortor tellus vitae felis.
 
+<p class = "vermelho">
 Phasellus sagittis volutpat ligula vel malesuada. Etiam eu imperdiet dui. Aliquam a bibendum ligula, at dignissim orci. Vivamus aliquet vel lectus ac molestie. Fusce auctor, est et pellentesque egestas, odio sapien finibus massa, nec molestie ante enim quis dui. Mauris viverra,mi in rhoncus tempor, libero nulla fringilla purus, sit amet tincidunt tortor tellus vitae felis.
+</p>

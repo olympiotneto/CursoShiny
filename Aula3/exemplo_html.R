@@ -11,8 +11,23 @@ ui <- fluidPage(
     "App com exemplos de HTML"
     ),
   tags$hr(),
-  includeMarkdown("md/descricao.md"),
-  tags$hr(),
+
+  fluidRow(
+    column(
+      width = 4,
+      includeMarkdown("md/descricao.md")
+    ),
+    column(
+      width = 4,
+      includeMarkdown("md/descricao.md")
+    ),
+    column(
+      width = 4,
+      includeMarkdown("md/descricao.md")
+    )
+  ),
+
+  tags$hr(class = "vermelho"),
   tags$img(
     src = "https://www.tre-sp.jus.br/administracao/destaques/6-de-outubro-falta-um-ano-para-as-eleicoes-2024/@@images/36d1863e-0228-401a-8673-a89d30343252.jpeg",
   style = "width: 200px; display: block; margin: auto;"
