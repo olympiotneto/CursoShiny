@@ -29,7 +29,12 @@ ui <- navbarPage(
         )
       ),
       mainPanel = mainPanel(
-        tableOutput("tab_estat_2"),
+        fluidRow(
+          column(
+            width = 6,
+           tableOutput("tab_estat_2")
+           )
+          ),
         plotOutput("grafico_p_2")
 
       )
