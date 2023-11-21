@@ -1,3 +1,7 @@
 .content-wrapper {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    /* para pegar código de gradientes, https://cssgradient.io/ */
+background: #8BC6EC;
+background-image: linear-gradient( 135deg, #97ABFF 10%, #123597 100%);
+
 }

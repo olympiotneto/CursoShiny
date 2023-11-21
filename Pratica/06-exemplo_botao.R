@@ -1,4 +1,5 @@
 library(shiny)
+library(tidyverse)
 
 ui <- fluidPage(
   titlePanel("Formulário"),
@@ -30,23 +31,25 @@ ui <- fluidPage(
 )
 
 server <- function(input, output, session) {
-  
+
+
+
   texto <- eventReactive(input$enviar,{
     idade <- round(
       as.numeric(Sys.Date() - lubridate::as_date(input$data_nascimento))/365
     )
-    
+
     glue::glue("Olá, {input$nome}! Você tem {idade} anos e mora no/na {input$pais}.")
-    
-    
+
+
   })
-  
+
   output$texto <- renderText({
     texto()
-    
-    
+
+
   })
-  
+
 }
 
 shinyApp(ui, server)
