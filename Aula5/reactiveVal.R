@@ -27,7 +27,7 @@ ui <- fluidPage(
 server <- function(input, output, session) {
 
   #Cria valor reativo:
-  tabela_atual <- reactiveVal(dados)
+  tabela_atual <- reactiveVo(dados)
 
   observeEvent(input$remover,{
     nova_tabela <-  tabela_atual() |>
